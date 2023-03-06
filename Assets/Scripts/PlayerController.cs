@@ -14,7 +14,6 @@ public class PlayerController : MonoBehaviour
     public GameObject GameOverPanel, scoreText;
     public Text FinalScoreText, HighScoreText;
 
-    // Start is called before the first frame update
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
@@ -22,7 +21,6 @@ public class PlayerController : MonoBehaviour
         StartCoroutine("IncreaseGameSpeed");
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (!isGameOver)

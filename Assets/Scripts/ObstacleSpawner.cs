@@ -8,13 +8,11 @@ public class ObstacleSpawner : MonoBehaviour
     [HideInInspector]
     public float obstacleSpawnInterval = 2.5f;
 
-    // Start is called before the first frame update
     void Start()
     {
         StartCoroutine("SpawnObstacles");
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().isGameOver)

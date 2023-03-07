@@ -79,9 +79,12 @@ public class PlayerController : MonoBehaviour
                 runSpeed += 0.2f;
             }
 
-            if(GameObject.Find("GroundSpawner").GetComponent<ObstacleSpawner>().obstacleSpawnInterval > 1)
+            if(gameObject.CompareTag("GroundSpawner") &&GetComponent<ObstacleSpawner>().obstacleSpawnInterval > 1)
             {
-                GameObject.Find("GroundSpawner").GetComponent<ObstacleSpawner>().obstacleSpawnInterval -= 0.1f;
+                if (gameObject.CompareTag("GroundSpawner"))
+                {
+                    GetComponent<ObstacleSpawner>().obstacleSpawnInterval -= 0.1f;
+                }
             }
             
         }

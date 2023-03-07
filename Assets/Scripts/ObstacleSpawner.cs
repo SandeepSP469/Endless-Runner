@@ -15,7 +15,7 @@ public class ObstacleSpawner : MonoBehaviour
 
     void Update()
     {
-        if (GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().isGameOver)
+        if (gameObject.GetComponent<PlayerController>() != null && GetComponent<PlayerController>().isGameOver)
         {
             StopCoroutine("SpawnObstacles");
         }

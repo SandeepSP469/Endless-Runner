@@ -10,7 +10,7 @@ public class ScoreSystem : MonoBehaviour
 
     void Update()
     {
-        if (GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().isGameOver)
+        if (gameObject.GetComponent<PlayerController>() != null && GetComponent<PlayerController>().isGameOver)
         {
             if(PlayerPrefs.GetInt("HighScore") < score)
             {
